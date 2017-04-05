@@ -1,0 +1,17 @@
+<%- partial('_partial/head') %>
+<%
+var bodyClass;
+
+if(is_post()) {
+    bodyClass = "sub-site";
+} else {
+    bodyClass = "thtrm-blog";
+}
+%>
+<body class="<%= bodyClass %>">
+    <%- partial('_partial/header') %>
+    <main role="main" class="thtrm-main">
+    </main>
+    <%- partial('_partial/footer') %>
+</body>
+</html>
