@@ -1,4 +1,16 @@
-<h2 class="thtrm-section-headline thtrm-section-headline--with-margin">All articles</h2>
+<%
+var categoryTitle;
+var c = page.category;
+
+if(c==="angular") {
+  categoryTitle = "Angular 2 articles";
+} else if(c==="git") {
+  categoryTitle = "Git articles";
+} else {
+  categoryTitle = "All articles";
+}
+%>
+<h2 class="thtrm-section-headline thtrm-section-headline--with-margin"><%= categoryTitle %></h2>
 <ul class="thtrm-three-column-list thtrm-three-column-list--with-padding">
   <% page.posts.each(function(post, i){ %>
     <%- partial('archive-post', {post: post}) %>
