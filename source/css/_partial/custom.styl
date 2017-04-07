@@ -1,0 +1,352 @@
+.thtrm-main
+  padding-bottom: 60px
+
+.thtrm-blog
+  .thtrm-main
+    margin: 0 auto
+    padding-left: 0
+    padding-right: 0
+    padding-top: 70px
+    min-height: 100%
+    &:before
+      position: absolute
+      z-index: -1
+      background-color: #466473
+      width: 100%
+      height: 230px
+      height: 70px
+      content: ''
+      top: 0
+      left: 0
+    .sub-site &
+      padding-top: 0
+      &:before
+        display: none
+    @media tablet
+      padding-top: 145px
+      &:before
+       height: 350px
+       height: 145px
+    @media desktop
+      min-height: initial
+  .thtrm-banner-text
+    font-size: 30px
+    @media tablet
+      font-size: 40px
+    @media desktop
+      font-size: 54px
+
+.thtrm-section
+  margin-top: 2em
+  &--is-promo
+    img
+      margin-bottom: 0.2em
+  @media tablet
+    &--is-promo
+      padding: 2em
+  &--is-promo-light
+    background: #5C8491
+    .thtrm-layout-divider-cta:hover
+      color: #5C8491
+
+.thtrm-section-headline
+  &--with-big-margin
+    font-size: 24px
+    margin-bottom: 1.5em
+    margin-top: 4em
+  &--with-margin
+    font-size: 24px
+    margin-bottom: 1.5em
+    margin-top: 2.5em
+    position: relative
+    &--white
+      color: #fff
+    a
+      color: #384c54
+      font-size: 14px
+      // position: absolute;
+      // right: 0;
+      text-decoration: none
+      border: 2px solid #384c54
+      padding: 0.5em
+      // top: -0.2em;
+      &:hover
+        background: #384c54
+        color: #fff
+  &--centered
+    text-align: center
+  &--with-border
+    padding-bottom: 0.5em
+    border-bottom: 2px solid #f2f2f2
+
+.thtrm-search
+  text-align: right
+  position: relative
+  form
+    z-index: 2
+    position: absolute
+    top: -0.2em
+    right: 0
+  input[type="search"]
+    border: 2px solid #eee
+    line-height: 1.6
+    font-size: 16px
+    padding: 0.2em 0.5em
+    margin-right: 0.2em
+    width: 140px
+    @media tablet
+      margin-right: 0.5em
+      width: 215px
+  button
+    margin-top: 0
+    &:hover,
+    &:focus
+      cursor: pointer
+
+.thtrm-cta-bar
+  text-align: right
+
+.thtrm-cta
+  background: transparent
+  &--small
+    font-size: 14px
+    margin-top: 2em
+
+.thtrm-table-layout-row--with-three-columns
+  &--with-padding
+    @media tablet
+      .thtrm-table-layout-cell
+        padding: 0
+
+.thtrm-table-layout-row--with-two-columns
+  &--with-padding
+    @media tablet
+      .thtrm-table-layout-cell
+        padding-left: 0.8em
+        &:first-child
+          padding-right: 0.8em
+          padding-left: 0
+
+.thtrm-instructor
+  height: 350px
+
+.thtrm-instructor-text
+  font-size: 16px
+  line-height: 1.4
+
+.thtrm-instructor-name
+  font-size: 20px
+
+.thtrm-instructor-cta
+  font-size: 14px
+
+.thtrm-instructor-overlay
+  @media desktop
+    padding: 4em
+
+.thtrm-three-column-list
+  @media phablet
+    display: flex
+    margin-left: -1em
+    margin-right: -1em
+    flex-direction: row
+    flex-wrap: wrap
+  &--with-padding
+    @media desktop
+      margin-left: -.8em
+      margin-right: -.8em
+    li
+      margin-top: 2em
+      @media phablet
+        padding: 0.8em
+  li
+    width: 100%
+    display: block
+    @media phablet
+      display: inline-block
+      display: flex
+      margin-top: 1em
+      vertical-align: top
+      width: 50%
+    @media desktop
+      width: 33.33%
+
+.thtrm-constraint--slim
+  padding-left: 2em
+  padding-right: 2em
+  @media tablet
+    padding-left: 7em
+    padding-right: 7em
+  @media desktop
+    padding-left: 11em
+    padding-right: 11em
+
+.thtrm-banner
+  // background-color: #62818F;
+  background-blend-mode: multiply
+
+.sub-site .thtrm-banner-container
+  padding: 8em 0.5em 4em
+  span
+    color: #fff
+    display: block
+    margin-top: 2em
+    font-style: italic
+    font-size: 14px
+    line-height: 1.5
+    a
+      color: #fff
+      font-weight: bold
+      text-decoration: none
+    @media desktop
+      font-size: 16px
+      margin-top: 4em
+  @media tablet
+    padding-top: 14em
+    padding-bottom: 6em
+  
+.thtrm-ad
+  background-color: #62a7be
+  &.thtrm-section--is-promo
+    padding: 1.5em
+    .thtrm-layout-divider-cta
+      border: 2px solid #fff
+  .thtrm-section-headline
+    margin-top: 0
+    font-size: 20px
+  &--sticky
+    position: absolute
+    top: 95px
+    right: -18em
+    left: inherit
+    width: 250px
+    .thtrm-section-text
+      font-size: 16px
+  &--without-description
+    .thtrm-section-text
+      display: none
+
+.thtrm-alert
+  background: #F99A9A
+  padding: 1em
+  margin-top: 40px
+  border: 2px solid #F56868
+  h2, h3
+    margin-top: 0
+
+.thtrm-tv
+  width: 100%
+  height: 200px
+  @media tablet
+    height: 500px
+
+.resp-sharing-button
+  display: inline-block
+  border-radius: 5px
+  border-width: 1px
+  border-style: solid
+  transition: background-color 25ms ease-out, border-color 25ms ease-out, opacity 250ms ease-out
+  margin: 0.5em
+  padding: 0.5em 0.75em
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif
+
+.resp-sharing-button a
+  text-decoration: none
+  color: #FFF
+  display: block
+
+.resp-sharing-button__icon
+  display: inline-block
+
+.resp-sharing-button__icon svg
+  width: 1em
+  height: 1em
+  margin-bottom: -0.1em
+
+/* Non solid icons get a stroke */
+.resp-sharing-button__icon
+  stroke: #FFF
+  fill: none
+
+/* Solid icons get a fill */
+.resp-sharing-button__icon--solid,
+.resp-sharing-button__icon--solidcircle
+  fill: #FFF
+  stroke: none
+
+.resp-sharing-button__link
+  text-decoration: none
+  color: #FFF
+
+.resp-sharing-button--large .resp-sharing-button__icon svg
+  padding-right: 0.4em
+
+.resp-sharing-button__wrapper
+  display: inline-block
+
+.resp-sharing-button--facebook
+  background-color: #3b5998
+  border-color: #3b5998
+
+.resp-sharing-button--facebook:hover,
+.resp-sharing-button--facebook:active
+  background-color: #2d4373
+  border-color: #2d4373
+
+.resp-sharing-button--twitter
+  background-color: #55acee
+  border-color: #55acee
+
+.resp-sharing-button--twitter:hover,
+.resp-sharing-button--twitter:active
+  background-color: #2795e9
+  border-color: #2795e9
+
+.resp-sharing-button--google
+  background-color: #dd4b39
+  border-color: #dd4b39
+
+.resp-sharing-button--google:hover,
+.resp-sharing-button--google:active
+  background-color: #c23321
+  border-color: #c23321
+
+.thtrm-ctas
+  text-align: center
+  .thtrm-cta
+    margin-left: 2em
+    margin-top: 0
+    &:first-child
+      margin-left: 0
+
+// NYC Training Banner with styles for mobile, tablets, and desktop
+.a2mc_nyc_skyline
+  background: url(/images/banner/nyc_skyline.jpg) center no-repeat
+  background-size: cover
+  padding-top: 2em
+  @media tablet
+    background: url(/images/banner/nyc_skyline_v2.jpg) center no-repeat
+    padding-top: 1.1em
+  @media desktop
+    background: url(/images/banner/nyc_skyline_v2.jpg) center no-repeat
+    background-size: contain
+    padding-top: 5px
+
+.thtrm-tldr
+  padding: 1.5em
+  background: #ceebf9
+  margin-top: 40px
+  h3
+    margin-top: 0
+  h4
+    margin-top: 40px
+  ul, ol, p
+    font-size: 17px
+    margin-bottom: 0
+    line-height: 1.6
+  ul, ol
+    margin-top: 20px
+    li
+      line-height: 1.6
+  ol
+    padding-left: 0
