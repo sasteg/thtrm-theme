@@ -1,0 +1,36 @@
+.thtrm-toc
+  margin-top: 50px
+  transition: opacity ease 6000ms
+  &--sticky
+    top: 95px
+    position: absolute
+    left: -18em
+    width: 250px
+  &--faded
+    opacity: 0.4
+    &:hover
+      opacity: 1
+      transition-duration: 300ms
+      transition-target: opacity
+  h3
+    border-bottom: 2px solid #f2f2f2
+    padding-bottom: 0.5em
+    text-transform: uppercase
+    margin-top: 0
+  li
+    margin-top: 0.6em
+    margin-left: 1em
+    color: #ccc
+    font-size: 16px
+    line-height: 1.4
+    &:hover
+      color: #384c54
+    ul, ol
+      margin-top: 0
+  a
+    display: block
+    border: none
+    &:hover
+      color: #384c54
+    span
+      border-bottom: 1px dotted #5C8491
