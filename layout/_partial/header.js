@@ -1,7 +1,7 @@
 <header id="header">
   <div class="thtrm-header-bar">
         <div class="thtrm-constraint">
-          <a href="http://thoughtram.io" class="thtrm-header-logo-link" title="thoughtram.io Start Page"><h1 class="thtrm-header-logo">thoughtram</h1></a>
+          <a href="/" class="thtrm-header-logo-link" title="thoughtram.io Start Page"><h1 class="thtrm-header-logo">thoughtram</h1></a>
           <div class="thtrm-header-menu-wrapper">
             <span role="button" tabindex="0" class="thtrm-header-menu-label">Menu</span>
             <ul class="thtrm-header-menu">
