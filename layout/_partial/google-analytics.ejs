@@ -1,0 +1,59 @@
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', '{{ site.google_analytics }}', 'auto');
+ga('send', 'pageview');
+
+var form = document.getElementById('search-form');
+var eventCta = document.getElementById('event-cta');
+
+if (eventCta) {
+
+  eventCta.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    setTimeout(clickLink, 1000);
+
+    function clickLink() {
+      window.location.replace(eventCta.getAttribute('href'));
+    }
+
+    ga('send', 'event', {
+      eventCategory: 'Event Link',
+      eventAction: 'click',
+      eventLabel: eventCta.getAttribute('title'),
+      hitCallback: clickLink
+    });
+  });
+}
+
+if (form) {
+
+  var searchTerm = document.getElementById('search-term');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var formSubmitted = false;
+
+    setTimeout(submitForm, 1000);
+
+    function submitForm() {
+      if (!formSubmitted) {
+        formSubmitted = true;
+        form.submit();
+      }
+    }
+
+    ga('send', 'event', {
+      eventCategory: 'Search Form',
+      eventAction: 'submit',
+      eventLabel: searchTerm.value,
+      hitCallback: submitForm
+    });
+  });
+}
+</script>
