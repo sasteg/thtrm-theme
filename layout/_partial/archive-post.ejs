@@ -2,7 +2,7 @@
     <div class="thtrm-article-card thtrm-article-card--with-border">
       <div class="thtrm-article-card-content ">
         <h2><%= post.title %></h2>
-        <p><%= post.summary %></p>
+        <p><%= truncate(post.summary, {length: 140}) %></p>
         <a href="<%- url_for(post.path) %>" title="<%= post.title %>" class="thtrm-cta thtrm-cta--small">Read More</a>
       </div>
     </div>
