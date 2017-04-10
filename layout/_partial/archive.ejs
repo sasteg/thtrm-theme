@@ -10,9 +10,11 @@ if(c==="angular") {
   categoryTitle = "All articles";
 }
 %>
-<h2 class="thtrm-section-headline thtrm-section-headline--with-margin"><%= categoryTitle %></h2>
-<ul class="thtrm-three-column-list thtrm-three-column-list--with-padding">
-  <% page.posts.each(function(post, i){ %>
-    <%- partial('archive-post', {post: post}) %>
-  <% }) %>
-</ul>
+<div class="thtrm-constraint">
+  <h2 class="thtrm-section-headline thtrm-section-headline--with-margin"><%= categoryTitle %></h2>
+  <ul class="thtrm-three-column-list thtrm-three-column-list--with-padding">
+    <% page.posts.each(function(post, i){ %>
+      <%- partial('archive-post', {post: post}) %>
+    <% }) %>
+  </ul>
+</div>
