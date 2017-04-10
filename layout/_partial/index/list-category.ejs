@@ -1,0 +1,15 @@
+<%  site.tags.findOne({name:category}).posts.sort('date', -1).limit(6).each(function(post) { %>
+    <li>
+        <a class="thtrm-article-card thtrm-article-card--transparent" href="<%= url_for(post.path) %>" title="<%= post.title %>">
+            <div class="thtrm-article-card-content">
+                <span><i class="material-icons">schedule</i> <%= date(post.date, config.date_format) %></span>
+                <span>
+                    <i class="material-icons">create</i>
+                    <%= post.author %>
+                </span>
+                <h3><%= post.title %></h3>
+                <p><%= truncate(post.summary, {length: 140}) %></p>
+            </div>
+        </a>
+    </li>
+<% }) %>
