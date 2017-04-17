@@ -3,6 +3,23 @@
     <div class="thtrm-table-layout">
         <div class="thtrm-table-layout-row thtrm-table-layout-row--with-two-columns thtrm-table-layout-row--with-two-columns--with-padding">
             <% site.posts.sort('date', -1).limit(7).each(function(post, i){ %>
+                <%
+                    var authName;
+                    switch (post.author) 
+                    {
+                        case "christoph_burgdorf":
+                            authName = "Christoph Burgdorf";
+                            break;
+                        case "pascal_precht":
+                            authName = "Pascal Precht";
+                            break;
+                        case "thomas_burleson":
+                            authName = "Thomas Burleson";
+                            break;
+                        default:
+                            break;
+                    }   
+                %>
                 <% if(i===3) { %>
                     <div class="thtrm-table-layout-cell">
                         <a class="thtrm-article-card" href="<%= url_for(post.path) %>" title="<%= post.title %>">
@@ -11,7 +28,7 @@
                                 <span class="thtrm-article-card-date"><i class="material-icons">schedule</i> <%= date(post.date, config.date_format) %></span>
                                 <span class="thtrm-article-card-author">
                                     <i class="material-icons">create</i>
-                                    <%= post.author %>
+                                    <%= authName %>
                                 </span>
                                 <h2><%= post.title %></h2>
                                 <p><%= post.summary %></p>
@@ -27,7 +44,7 @@
                                 <span><i class="material-icons">schedule</i> <%= date(post.date, config.date_format) %></span>
                                 <span>
                                     <i class="material-icons">create</i>
-                                    <%= post.author %>
+                                    <%= authName %>
                                 </span>
                                 <h3><%= post.title %></h3>
                                 <p><%= post.summary %></p>
