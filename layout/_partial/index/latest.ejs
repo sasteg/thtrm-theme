@@ -4,23 +4,6 @@
         <div class="thtrm-table-layout-row thtrm-table-layout-row--with-two-columns thtrm-table-layout-row--2-3">
             <div class="thtrm-table-layout-cell">
                 <% site.posts.sort('date', -1).limit(3).each(function(post, i){ %>
-                    <%
-                        var authName;
-                        switch (post.author) 
-                        {
-                            case "christoph_burgdorf":
-                                authName = "Christoph Burgdorf";
-                                break;
-                            case "pascal_precht":
-                                authName = "Pascal Precht";
-                                break;
-                            case "thomas_burleson":
-                                authName = "Thomas Burleson";
-                                break;
-                            default:
-                                break;
-                        }   
-                    %>
                     <% if (i===0) { %>
                         <a title="<%= post.title %>" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.01) 2%,#29383E 100%), url('<%= post.imageUrl %>');" href="<%- url_for(post.path) %>" class="thtrm-promo-item">
                             <div class="thtrm-promo-item-info">
@@ -29,7 +12,7 @@
                                 <span><i class="material-icons">schedule</i> <%= date(post.date, config.date_format) %></span>
                                 <span class="thtrm-promo-item-info-author">
                                     <i class="material-icons">create</i>
-                                    <%= authName %>
+                                    <%- author(post.author, 'name') %>
                                 </span>
                             </div>
                         </a>
@@ -43,7 +26,7 @@
                                 <span><i class="material-icons">schedule</i> <%= date(post.date, config.date_format) %></span>
                                 <span class="thtrm-promo-item-info-author">
                                     <i class="material-icons">create</i>
-                                    <%= authName %>
+                                    <%- author(post.author, 'name') %>
                                 </span>
                             </div>
                         </a>

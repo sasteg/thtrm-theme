@@ -5,7 +5,7 @@
                 <span><i class="material-icons">schedule</i> <%= date(post.date, config.date_format) %></span>
                 <span>
                     <i class="material-icons">create</i>
-                    <%= post.author %>
+                    <%- author(post.author, 'name') %>
                 </span>
                 <h3><%= post.title %></h3>
                 <p><%= truncate(post.summary, {length: 140}) %></p>
