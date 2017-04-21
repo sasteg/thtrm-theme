@@ -20,7 +20,7 @@ hexo.extend.helper.register('author', function(name, info){
             authName = "Pascal Precht";
             authEmail = "pascal@thoughtram.io";
             authBio = "Pascal is a front-end engineer and a Angular Developer Expert nominated by Google. He created the angular-translate module, is an Angular 2 contributor and also part of the Angular 2 Docs Authoring team.";
-            authGravatar = "/iamges/author-pascal.jpg";
+            authGravatar = "/images/author-pascal.jpg";
             authTwitter = "http://twitter.com/PascalPrecht";
             authGithub = "http://github.com/PascalPrecht";
             break;
